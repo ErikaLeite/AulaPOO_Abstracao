@@ -1,11 +1,25 @@
+using System;
+
 namespace AulaPOO_Abstracao.classes
 {
     public abstract class Pagamento
     {
-        // private datetime data; VERIFICAR--
+        private DateTime data; //Para funcionar precisa utilizar o SYSTEM
+        public DateTime Data
+        {
+            get {return DateTime.Now;}
+            set {data = value;}
+        }        
         protected float valor;
 
-        public string Cancelar()
+
+        public float Valor
+        {
+            get {return valor;}
+            set {valor = value;}
+        }
+
+        public virtual string Cancelar()
         {
             return "";
         }

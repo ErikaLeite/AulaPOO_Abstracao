@@ -1,3 +1,4 @@
+using System;
 namespace AulaPOO_Abstracao.classes
 {
     public class Credito : Cartao
@@ -13,7 +14,11 @@ namespace AulaPOO_Abstracao.classes
 
         public void Pagar(float valor)
         {
-
+            if(valor <= limite){
+                System.Console.WriteLine("Compra Aprovada!");
+            }else{
+                System.Console.WriteLine("Compra Não aprovada! Entre em contato com sua administradora.");
+            }
         }
     }
 }
